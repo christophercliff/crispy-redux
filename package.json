@@ -1,7 +1,7 @@
 {
   "name": "crispy-redux",
   "description": "Redux utilities",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "engines": {
     "node": "4.2.x"
   },
