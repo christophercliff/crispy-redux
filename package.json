@@ -14,7 +14,7 @@
     "coverage": "./node_modules/karma/bin/karma start karma.config.js --mode coverage",
     "style": "./node_modules/crispy/node_modules/.bin/eslint -c ./node_modules/crispy/.eslintrc --ext '.js,.jsx' ./ --ignore-pattern '**/+(coverage|fixtures|node_modules)/**'",
     "test": "./node_modules/karma/bin/karma start karma.config.js",
-    "test-dev": "./node_modules/karma/bin/karma start karma.config.js --mode dev"
+    "dev": "./node_modules/karma/bin/karma start karma.config.js --mode dev"
   },
   "dependencies": {
     "immutable": "^3.8.1",
