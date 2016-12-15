@@ -4,7 +4,7 @@ module.exports = {
     context: __dirname,
     devtool: 'eval',
     entry: {
-        index: './__test__/createReducer.spec.js',
+        index: './__test__/entry.js',
     },
     plugins: [
         new webpack.DefinePlugin({

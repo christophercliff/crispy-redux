@@ -72,7 +72,7 @@ module.exports = function (config) {
         },
         colors: true,
         files: [
-            './__test__/createReducer.spec.js',
+            './__test__/entry.js',
         ],
         frameworks: [
             'mocha',
@@ -90,7 +90,7 @@ module.exports = function (config) {
         ],
         port: 9876,
         preprocessors: {
-            './__test__/createReducer.spec.js': [
+            './__test__/entry.js': [
                 'webpack',
                 'sourcemap',
             ],
