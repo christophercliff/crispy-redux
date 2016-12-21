@@ -12,6 +12,9 @@ module.exports = {
                 NODE_ENV: JSON.stringify('test'),
             },
         }),
+        new webpack.ProvidePlugin({
+            Promise: 'bluebird',
+        }),
     ],
     resolve: {
         root: __dirname,
