@@ -1,6 +1,6 @@
 var get = require('lodash/get')
 var has = require('lodash/has')
-var PropError = require('PropError')
+var PropError = require('./PropError')
 
 module.exports = prop
 

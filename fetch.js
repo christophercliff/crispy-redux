@@ -1,4 +1,4 @@
-var FetchError = require('FetchError')
+var FetchError = require('./FetchError')
 
 module.exports = safeFetch
 
