@@ -1,5 +1,6 @@
-var prop = require('prop')
 var expect = require('chai').expect
+var prop = require('prop')
+var PropError = require('PropError')
 
 describe('prop()', function () {
 
@@ -8,7 +9,7 @@ describe('prop()', function () {
     })
 
     it('should throw if invalid path', function () {
-        expect(prop.bind(undefined, {}, 'a')).to.throw(TypeError)
+        expect(prop.bind(undefined, {}, 'a')).to.throw(PropError)
     })
 
 })
