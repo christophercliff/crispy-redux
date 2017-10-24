@@ -1,9 +1,10 @@
 /* global sinon */
-var fetch = require('fetch')
+var Bluebird = require('bluebird')
 var FetchError = require('FetchError')
+var getFetch = require('getFetch')
 var expect = require('chai').expect
 
-describe('fetch()', function () {
+describe('getFetch()', function () {
 
     var stub
 
@@ -19,11 +20,11 @@ describe('fetch()', function () {
             return Promise.resolve({
                 status: 200,
                 json: function () {
-                    return parsedResponse
+                    return Bluebird.resolve(parsedResponse)
                 },
             })
         })
-        fetch(url, options)
+        getFetch(stub)(url, options)
             .then(function (res) {
                 expect(stub).to.have.callCount(1)
                 expect(stub).to.have.been.calledWith(url, options)
@@ -36,9 +37,12 @@ describe('fetch()', function () {
         stub = sinon.stub(global, 'fetch', function () {
             return Promise.resolve({
                 status: 500,
+                json: function () {
+                    return Bluebird.resolve({})
+                },
             })
         })
-        fetch()
+        getFetch(stub)()
             .then(function () {
                 throw new Error('Should not resolve')
             })
